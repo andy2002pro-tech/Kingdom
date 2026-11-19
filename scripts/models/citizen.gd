@@ -29,9 +29,10 @@ var color: Color = Color.WHITE
 
 var position: Vector2 = Vector2.ZERO
 var target: Vector2 = Vector2.ZERO
+var home_position: Vector2 = Vector2.ZERO
 
 var mood: String = "Contento"
-var activity: String = "Libre"
+var activity: String = "Paseando"
 
 func initialize(citizen_id: int, rng: RandomNumberGenerator) -> void:
     id = citizen_id
@@ -60,7 +61,7 @@ func initialize(citizen_id: int, rng: RandomNumberGenerator) -> void:
     )
 
     mood = "Contento"
-    activity = "Libre"
+    activity = "Paseando"
 
 func update_mood() -> void:
     if hunger < 20.0:
