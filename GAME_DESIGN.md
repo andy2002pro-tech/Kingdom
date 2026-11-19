@@ -126,10 +126,56 @@ La narracion debe basarse en hechos registrados por la simulacion. No debe inven
 
 La historia se registrara progresivamente desde las primeras versiones que incorporen estos sistemas, para evitar perder acontecimientos antes de implementar la cronica completa.
 
-## Construccion, monumentos y memoria
+## Construccion, zonas de trabajo y memoria
+
+La construccion tendra dos escalas relacionadas, correspondientes a los dos niveles del mapa.
+
+### Construccion local: mapa del asentamiento
+
+En el mapa del asentamiento, el jugador organizara directamente el espacio y las construcciones pequeñas y medianas.
+
+Categorias previstas:
+- Viviendas y residencias.
+- Edificios de produccion: herrerias, carpinterias, talleres y molinos.
+- Agricultura: granjas, almacenes de grano y edificios relacionados.
+- Comercio: mercados, tiendas y almacenes.
+- Instalaciones militares: cuarteles, armerias y torres.
+- Administracion: edificios de gobierno y residencias de autoridades.
+- Religion: templos, santuarios y monasterios.
+- Infraestructura y defensas locales: caminos, puertas, paredes y murallas.
+
+### Zonas de trabajo locales
+
+El jugador podra dibujar o delimitar manualmente parcelas y zonas sobre el terreno.
+
+Ejemplos:
+- Campos de cultivo, con seleccion del tipo de cultivo.
+- Pastizales y zonas de ganaderia.
+- Areas de trabajo y produccion.
+- Parcelas reservadas para futuras construcciones.
+
+Los ciudadanos reconoceran las zonas asignadas y podran trabajar en ellas autonomamente. La produccion dependera de trabajadores, habilidades, herramientas, tiempo, recursos y condiciones del terreno.
+
+Los cultivos requeriran preparacion, siembra, mantenimiento y cosecha. Los productos deberan transportarse y almacenarse.
+
+### Construccion territorial: mapa estrategico
+
+En el mapa estrategico se fundaran asentamientos y se estableceran proyectos de gran escala:
+- Aldeas, ciudades y fortalezas.
+- Castillos, puestos militares y grandes murallas.
+- Instalaciones de explotacion forestal.
+- Minas y canteras.
+- Instalaciones pesqueras y puntos de acceso a recursos.
+- Grandes templos y complejos religiosos.
+- Infraestructura y proyectos que conecten regiones.
+
+Los recursos naturales apareceran en regiones concretas. El jugador podra seleccionar un recurso y establecer una instalacion para explotarlo. La administracion detallada de trabajadores y produccion se conectara con los asentamientos.
+
+### Monumentos y memoria
+
 La construccion tambien servira para preservar la memoria colectiva.
 
-Los jugadores podran crear, progresivamente:
+Los jugadores podran crear:
 - Estatuas de fundadores, gobernantes y heroes.
 - Monumentos conmemorativos de guerras y batallas.
 - Mausoleos y tumbas de personajes importantes.
@@ -143,14 +189,157 @@ Los gobernantes podran promover, autorizar, rechazar o retirar monumentos, gener
 
 Las construcciones historicas estaran vinculadas a personajes y acontecimientos reales del archivo del reino.
 
-## Mundo exterior
-El mundo incluira otros reinos y asentamientos con sus propios gobernantes, intereses, facciones y relaciones.
+## Mapas y escalas del mundo
 
-El jugador podra comerciar, negociar, formar alianzas, declarar guerras, defender territorios y decidir si ayuda a asentamientos aliados.
+El juego utilizara dos escalas principales de mapa.
 
-La ayuda, la indiferencia o la traicion afectaran la confianza, lealtad y estabilidad de las relaciones.
+### Mapa del asentamiento
 
-Los conflictos entre reinos tambien generaran acontecimientos que quedaran registrados en sus respectivas historias.
+Representara una aldea, ciudad o fortaleza con suficiente detalle para observar:
+- Ciudadanos, viviendas y edificios.
+- Parcelas, cultivos y zonas de trabajo.
+- Instalaciones de produccion y almacenamiento.
+- Caminos, defensas y espacios publicos.
+- Actividades cotidianas de los habitantes.
+
+### Mapa estrategico y regional
+
+Representara el territorio y las relaciones entre asentamientos y reinos.
+
+Mostrara:
+- Territorios controlados por cada reino.
+- Fronteras, reclamaciones y regiones en disputa.
+- Capitales y asentamientos importantes.
+- Castillos, fortalezas y puntos estrategicos.
+- Recursos naturales regionales.
+- Ejercitos, grupos independientes y movimientos conocidos.
+- Rutas comerciales y conexiones entre territorios.
+
+El mapa tendra filtros de informacion politica, economica, militar, diplomatica y de recursos. La informacion visible dependera del conocimiento, exploracion, relaciones y capacidades de inteligencia del reino.
+
+No todos los asentamientos ni movimientos lejanos tendran que mostrarse con el mismo nivel de detalle.
+
+## Territorios, asentamientos y administracion autonoma
+
+Los reinos podran expandirse mediante fundacion, colonizacion, acuerdos, vasallaje o conquista.
+
+Al fundar o adquirir un asentamiento, el jugador podra designar a una persona para administrarlo:
+- Un miembro de una familia noble o real.
+- Un vasallo.
+- Un ciudadano que haya ascendido por sus capacidades, prestigio o apoyo.
+
+La legitimidad del nombramiento dependera del regimen, las leyes, la cultura, el linaje y el apoyo de los grupos relevantes. Un gobernante sin ascendencia noble podria ser rechazado por determinadas familias, aunque tambien podria obtener apoyo popular por su competencia.
+
+Los gobernadores seran personajes autonomos con lealtad, ambicion, capacidades, relaciones e intereses. Dentro de sus atribuciones podran administrar recursos, promover obras, solicitar tropas y tomar decisiones locales.
+
+Podran negociar, desobedecer, conspirar, buscar independencia o establecer contactos con poderes extranjeros. Sus decisiones tendran consecuencias para el reino y quedaran registradas historicamente.
+
+Se distinguiran tres situaciones:
+- Asentamientos administrados directamente por el reino.
+- Territorios gobernados por autoridades o vasallos internos.
+- Reinos vasallos que conservan su propio gobernante e instituciones bajo obligaciones pactadas.
+
+Los vasallos podran negociar tributos, proteccion, autonomia, obligaciones militares y compromisos diplomaticos. Sus relaciones podran mantenerse durante generaciones o terminar en rebelion, independencia o traicion.
+
+Otros gobernantes tambien podran solicitar voluntariamente incorporarse como vasallos del jugador, por ejemplo buscando proteccion frente a un enemigo.
+
+## Recursos, economia y conexiones productivas
+
+Los recursos existiran en lugares concretos del mundo y tendran procesos de extraccion, transporte, almacenamiento, transformacion y utilizacion.
+
+Ejemplo: un deposito regional de hierro puede explotarse mediante una mina. El mineral se transportara a un asentamiento, se almacenara y despues podra utilizarse en una herreria para fabricar herramientas, armas o armaduras.
+
+La misma logica se aplicara a madera, piedra, alimentos, productos agricolas, pescado y otros recursos.
+
+Las zonas de produccion no generaran recursos automaticamente. Necesitaran trabajadores, tiempo, herramientas, infraestructura y condiciones apropiadas.
+
+Los asentamientos podran desarrollar especializaciones economicas segun sus recursos, ubicacion, poblacion e infraestructura.
+
+## Viajes, transporte y biomas
+
+El movimiento por el mapa estrategico sera un sistema jugable inspirado en los mapas de campana de Mount & Blade, adaptado a la escala y perspectiva de SociedadViva.
+
+Los grupos y ejercitos tendran velocidad segun:
+- Medio de transporte y animales disponibles.
+- Composicion y tamano del grupo.
+- Equipo, suministros y carga transportada.
+- Presencia de maquinaria de asedio, como arietes y torres.
+- Terreno, clima y bioma.
+
+Los enemigos podran perseguir al jugador y el jugador podra perseguirlos. La informacion sobre perseguidores, distancias y movimientos dependera de la visibilidad y el conocimiento disponible.
+
+Los biomas tendran caracteristicas propias. Bosques, llanuras, montanas, nieve, pantanos y desiertos podran modificar velocidad, acceso, visibilidad y condiciones de viaje.
+
+Los ejercitos necesitaran abastecimiento. La distancia, las rutas, la comida, el transporte y la posibilidad de proteger las caravanas influiran en la capacidad de mantener campanas militares.
+
+## Combate y asedios
+
+El combate tendra una representacion 2D adaptada a la perspectiva visual del juego.
+
+Se buscara conservar decisiones tacticas relacionadas con tropas, terreno, persecuciones, equipo y asedios, sin intentar reproducir directamente el combate tridimensional de Mount & Blade.
+
+Las batallas y asedios tendran consecuencias sobre personajes, asentamientos, recursos, territorios y relaciones politicas. Sus acontecimientos importantes se conservaran en el archivo historico.
+
+## Facciones independientes
+
+El mundo incluira grupos que no pertenecen necesariamente a ningun reino.
+
+Ejemplos:
+- Comunidades nomadas y grupos migratorios.
+- Bandidos y grupos de saqueadores.
+- Companias de mercenarios.
+- Otros grupos independientes que puedan surgir segun las condiciones del mundo.
+
+Estos grupos tendran lideres, objetivos, recursos, relaciones y reglas de comportamiento propias. Podran desplazarse, comerciar, atacar, negociar, aliarse, dividirse o desaparecer.
+
+No seran simples enemigos decorativos: formaran parte de la simulacion del mundo.
+
+## Expansion, fronteras y disputas territoriales
+
+Los reinos podran continuar expandiendose despues de la generacion inicial del mundo mediante asentamientos, acuerdos, vasallaje y conquista.
+
+La expansion tendra consecuencias diplomaticas y militares. Los vecinos podran sentirse amenazados, exigir que se detenga la expansion, formar coaliciones o iniciar conflictos.
+
+Existiran reclamaciones historicas, familiares, culturales y politicas sobre territorios. Una region podra ser reclamada por varios poderes y generar negociaciones, litigios, tensiones, rebeliones o guerras.
+
+Estas reglas se aplicaran a todos los reinos, no solamente al jugador. Los poderes extranjeros tambien creceran, competiran y reaccionaran ante la expansion de otros.
+
+## Simulacion del mundo y rendimiento
+
+El mundo continuara evolucionando aunque el jugador no intervenga. Otros reinos podran comerciar, guerrear, expandirse, cambiar de gobernante, sufrir rebeliones, formar alianzas o desaparecer.
+
+Para mantener el rendimiento, especialmente en dispositivos moviles, se utilizaran distintos niveles internos de simulacion:
+- Simulacion detallada para asentamientos y personajes cercanos o relevantes.
+- Simulacion regional resumida para produccion, poblacion, ejercitos y acontecimientos de zonas intermedias.
+- Simulacion abstracta para economia, diplomacia y conflictos lejanos.
+
+Los resultados importantes deberan conservarse aunque una region no este cargada con detalle. Al acercarse el jugador, se podra recuperar la simulacion local a partir del estado persistente.
+
+El mundo podra generarse proceduralmente mediante una semilla y conservar su geografia y acontecimientos en la partida. Su expansion y carga deberan ser progresivas y compatibles con limites configurables de rendimiento.
+
+
+## Mundo exterior y diplomacia
+
+Cada reino extranjero sera una sociedad autonoma con gobernantes, familias, facciones, instituciones, economia, asentamientos y fuerzas militares propias.
+
+Las relaciones entre reinos dependeran de guerras, tratados, alianzas, comercio, disputas fronterizas, ideologias, acciones contra familias y facciones, y relaciones personales entre gobernantes.
+
+Se contemplan:
+- Paz, no agresion y tratados de frontera.
+- Alianzas defensivas y militares.
+- Acuerdos comerciales, mercados y rutas de comercio.
+- Suministro de alimentos y recursos.
+- Ayuda militar, paso de tropas y refuerzos.
+- Coaliciones, intercambio de territorios y reconocimiento de fronteras.
+- Vasallaje, tributos y acuerdos de autonomia.
+- Espionaje, sabotaje, amenazas, embargos e informacion falsa.
+- Declaraciones de guerra, invasiones, ocupaciones, rendiciones y tratados de paz.
+
+Los reinos podran luchar entre ellos sin participacion del jugador. Los aliados podran solicitar ayuda; aceptarla tendra costes y riesgos, mientras rechazarla podra perjudicar la confianza.
+
+Los gobernantes de asentamientos y territorios tendran relaciones propias y podran negociar o actuar en contra de los intereses de su reino, segun su autoridad y circunstancias.
+
+Los conflictos entre reinos generaran acontecimientos que quedaran registrados en sus respectivas historias.
 
 ## Narracion emergente
 El objetivo es que los sistemas produzcan historias diferentes en cada partida sin depender exclusivamente de una historia predeterminada.
