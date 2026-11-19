@@ -34,6 +34,13 @@ var home_position: Vector2 = Vector2.ZERO
 var mood: String = "Contento"
 var activity: String = "Paseando"
 
+# Sistema social v0.3.0
+var relationships: Dictionary = {}
+var social_partner_id: int = -1
+var social_time: float = 0.0
+var social_cooldown: float = 0.0
+var conversations: int = 0
+
 func initialize(citizen_id: int, rng: RandomNumberGenerator) -> void:
     id = citizen_id
     citizen_name = NAMES[citizen_id % NAMES.size()]
@@ -62,6 +69,36 @@ func initialize(citizen_id: int, rng: RandomNumberGenerator) -> void:
 
     mood = "Contento"
     activity = "Paseando"
+
+    relationships.clear()
+    social_partner_id = -1
+    social_time = 0.0
+    social_cooldown = rng.randf_range(2.0, 8.0)
+    conversations = 0
+
+func set_relationship(other_id: int, affinity: float) -> void:
+    relationships[other_id] = clampf(affinity, -100.0, 100.0)
+
+func get_relationship(other_id: int) -> float:
+    return float(relationships.get(other_id, 0.0))
+
+func adjust_relationship(other_id: int, amount: float) -> void:
+    set_relationship(
+        other_id,
+        get_relationship(other_id) + amount
+    )
+
+func get_relationship_status(other_id: int) -> String:
+    var affinity = get_relationship(other_id)
+
+    if affinity >= 60.0:
+        return "Amigo"
+    elif affinity <= -40.0:
+        return "Rival"
+    elif affinity >= 15.0:
+        return "Conocido"
+    else:
+        return "Desconocido"
 
 func update_mood() -> void:
     if hunger < 20.0:

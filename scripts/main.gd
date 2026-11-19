@@ -41,6 +41,8 @@ func create_citizens() -> void:
         person.target = _random_target()
         citizens.append(person)
 
+    _initialize_relationships()
+
 func _random_target() -> Vector2:
     return Vector2(
         rng.randf_range(100, 1180),
@@ -115,7 +117,179 @@ func _update_citizen(person: Citizen, delta: float) -> void:
             if person.position.distance_to(person.target) < 8.0:
                 person.target = _random_target()
 
+    _update_social(person, delta)
     person.update_mood()
+
+
+func _initialize_relationships() -> void:
+    for i in range(citizens.size()):
+        for j in range(i + 1, citizens.size()):
+            var first = citizens[i]
+            var second = citizens[j]
+            var affinity = rng.randf_range(-12.0, 15.0)
+
+            if first.personality == second.personality:
+                affinity += 3.0
+
+            first.set_relationship(second.id, affinity)
+            second.set_relationship(first.id, affinity)
+
+
+func _get_citizen_by_id(citizen_id: int) -> Citizen:
+    for person in citizens:
+        if person.id == citizen_id:
+            return person
+
+    return null
+
+
+func _update_social(person: Citizen, delta: float) -> void:
+    if person.social_partner_id == -1:
+        if person.activity != "Paseando":
+            return
+
+        if person.hunger < 45.0 or person.energy < 40.0:
+            return
+
+        person.social_cooldown = maxf(
+            0.0,
+            person.social_cooldown - delta
+        )
+
+        if person.social_cooldown > 0.0:
+            return
+
+        var nearest: Citizen = null
+        var best_distance = 110.0
+
+        for other in citizens:
+            if other.id == person.id:
+                continue
+
+            if other.social_partner_id != -1:
+                continue
+
+            if other.activity != "Paseando":
+                continue
+
+            if other.hunger < 45.0 or other.energy < 40.0:
+                continue
+
+            var distance = person.position.distance_to(other.position)
+
+            if distance < best_distance:
+                best_distance = distance
+                nearest = other
+
+        if nearest == null:
+            person.social_cooldown = 1.5
+            return
+
+        var meeting_point = (
+            person.position + nearest.position
+        ) / 2.0
+
+        person.social_partner_id = nearest.id
+        nearest.social_partner_id = person.id
+
+        person.social_time = 0.0
+        nearest.social_time = 0.0
+
+        person.activity = "Conversando"
+        nearest.activity = "Conversando"
+
+        person.target = meeting_point
+        nearest.target = meeting_point
+        return
+
+    var partner = _get_citizen_by_id(person.social_partner_id)
+
+    if partner == null:
+        _end_conversation(person, null)
+        return
+
+    if partner.social_partner_id != person.id:
+        _end_conversation(person, partner)
+        return
+
+    if person.activity != "Conversando":
+        _end_conversation(person, partner)
+        return
+
+    if partner.activity != "Conversando":
+        _end_conversation(person, partner)
+        return
+
+    # Solo el ciudadano con menor ID controla el tiempo.
+    if person.id > partner.id:
+        return
+
+    var meeting_point = (
+        person.position + partner.position
+    ) / 2.0
+
+    person.target = meeting_point
+    partner.target = meeting_point
+
+    if person.position.distance_to(partner.position) < 45.0:
+        person.social_time += delta
+
+    if person.social_time >= 3.5:
+        var affinity_change = 2.0
+
+        if rng.randf() < 0.18:
+            affinity_change = -2.0
+
+        if person.personality == partner.personality:
+            affinity_change += 1.0
+
+        person.adjust_relationship(
+            partner.id,
+            affinity_change
+        )
+
+        partner.adjust_relationship(
+            person.id,
+            affinity_change
+        )
+
+        person.conversations += 1
+        partner.conversations += 1
+
+        person.happiness = minf(
+            100.0,
+            person.happiness + 2.0
+        )
+
+        partner.happiness = minf(
+            100.0,
+            partner.happiness + 2.0
+        )
+
+        _end_conversation(person, partner)
+
+
+func _end_conversation(
+    person: Citizen,
+    partner: Citizen
+) -> void:
+    person.social_partner_id = -1
+    person.social_time = 0.0
+    person.social_cooldown = rng.randf_range(10.0, 18.0)
+
+    if person.activity == "Conversando":
+        person.activity = "Paseando"
+        person.target = _random_target()
+
+    if partner != null:
+        partner.social_partner_id = -1
+        partner.social_time = 0.0
+        partner.social_cooldown = rng.randf_range(10.0, 18.0)
+
+        if partner.activity == "Conversando":
+            partner.activity = "Paseando"
+            partner.target = _random_target()
+
 
 func _mood_color(mood: String) -> Color:
     match mood:
