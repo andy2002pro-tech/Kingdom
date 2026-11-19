@@ -2,35 +2,38 @@
 
 Simulador medieval de sociedad viva desarrollado con Godot 4.7.
 
-## Estado actual: v0.1.0
+## Estado actual: v0.2.0
 
-La versión inicial contiene:
-
-- Terreno 2D.
-- Caminos principales y secundarios.
-- 45 árboles decorativos.
-- 4 casas.
-- 12 habitantes con movimiento aleatorio.
-- Colores individuales para los habitantes.
-- Contador de población.
+La version actual incluye:
+- Terreno 2D y caminos.
+- 45 arboles decorativos.
+- Cuatro casas.
+- Doce ciudadanos.
+- Movimiento y actividades autonomas.
+- Modelo Citizen integrado.
+- Personalidades y necesidades.
+- Hambre, energia y estados de animo.
+- Alimentacion y descanso.
 
 ## Estructura
-
-- project.godot: configuración.
+- project.godot: configuracion.
 - scenes/main/main.tscn: escena principal.
-- scripts/main.gd: mapa y simulación actual.
+- scripts/main.gd: mapa y simulacion.
 - scripts/models/citizen.gd: modelo de ciudadano.
 - backups/: copias de seguridad.
 
-## Tecnología
-
-Godot 4.7, GDScript y gráficos 2D.
+## Tecnologia
+Godot 4.7, GDScript y graficos 2D.
 
 ## Objetivo
+Crear un sandbox de sociedad, gobierno y estrategia donde el jugador construye un reino desde cero y toma decisiones que afectan a ciudadanos, familias, facciones y otros reinos.
 
-Crear una sociedad medieval autónoma con ciudadanos,
-personalidades, necesidades, relaciones y economía.
+Las relaciones, conflictos, gobiernos y acontecimientos deben generar historias emergentes y consecuencias persistentes.
+
+## Documentacion
+- GAME_DESIGN.md: vision y concepto completo del juego.
+- ROADMAP.md: etapas y objetivos de desarrollo.
+- CHANGELOG.md: historial de versiones.
 
 ## Desarrollo
-
-El proyecto se edita desde Termux y se ejecuta en Godot.
+El proyecto se edita desde Android utilizando Termux y se ejecuta en Godot.
