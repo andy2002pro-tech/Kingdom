@@ -395,6 +395,20 @@ func _draw() -> void:
             Color(0, 0, 0, 0.25)
         )
 
+        var faction_color = Color.WHITE
+
+        for faction in factions:
+            if faction.id == person.faction_id:
+                faction_color = faction.color
+                break
+
+        # Aro de color para identificar la faccion
+        draw_circle(
+            p,
+            11,
+            faction_color
+        )
+
         draw_circle(
             p,
             8,
@@ -462,6 +476,8 @@ func _draw() -> void:
         16,
         Color("#f5e6c5")
     )
+
+    _draw_faction_panel()
 
 func draw_house(pos: Vector2, label: String) -> void:
     # Sombra
@@ -558,3 +574,54 @@ func _initialize_factions() -> void:
 
         if faction.leader_id == -1:
             faction.set_leader(person.id)
+
+func _draw_faction_panel() -> void:
+    # Panel de facciones v0.4.1
+    draw_rect(
+        Rect2(840, 15, 425, 170),
+        Color(0.08, 0.12, 0.08, 0.92)
+    )
+
+    draw_rect(
+        Rect2(840, 15, 425, 170),
+        Color("#c5aa72"),
+        false,
+        2.0
+    )
+
+    draw_string(
+        ThemeDB.fallback_font,
+        Vector2(858, 43),
+        "FACciones DEL REINO",
+        HORIZONTAL_ALIGNMENT_LEFT,
+        -1,
+        20,
+        Color("#f5e6c5")
+    )
+
+    for i in range(factions.size()):
+        var faction: Faction = factions[i]
+        var row_y = 76.0 + float(i) * 26.0
+
+        draw_rect(
+            Rect2(858, row_y - 11, 12, 12),
+            faction.color
+        )
+
+        var info = "%s | %d miembros | I:%d L:%d D:%d" % [
+            faction.faction_name,
+            faction.members.size(),
+            int(faction.influence),
+            int(faction.loyalty),
+            int(faction.discontent)
+        ]
+
+        draw_string(
+            ThemeDB.fallback_font,
+            Vector2(880, row_y),
+            info,
+            HORIZONTAL_ALIGNMENT_LEFT,
+            -1,
+            12,
+            Color.WHITE
+        )
