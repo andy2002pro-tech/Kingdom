@@ -34,6 +34,9 @@ var home_position: Vector2 = Vector2.ZERO
 var mood: String = "Contento"
 var activity: String = "Paseando"
 
+# Faccion principal v0.4.0
+var faction_id: int = -1
+
 # Sistema social v0.3.0
 var relationships: Dictionary = {}
 var social_partner_id: int = -1

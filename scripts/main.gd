@@ -1,6 +1,7 @@
 extends Node2D
 
 var citizens: Array[Citizen] = []
+var factions: Array[Faction] = []
 var rng = RandomNumberGenerator.new()
 
 const GRASS = Color("#668b4b")
@@ -42,6 +43,7 @@ func create_citizens() -> void:
         citizens.append(person)
 
     _initialize_relationships()
+    _initialize_factions()
 
 func _random_target() -> Vector2:
     return Vector2(
@@ -505,3 +507,54 @@ func draw_house(pos: Vector2, label: String) -> void:
         13,
         Color.WHITE
     )
+
+
+# Sistema de facciones v0.4.0
+func _initialize_factions() -> void:
+    factions.clear()
+
+    var nobles = Faction.new()
+    nobles.initialize(
+        0,
+        "Familias nobles",
+        "Buscan influencia y poder politico.",
+        Color("#b99b55")
+    )
+    factions.append(nobles)
+
+    var merchants = Faction.new()
+    merchants.initialize(
+        1,
+        "Comerciantes",
+        "Buscan riqueza y oportunidades comerciales.",
+        Color("#65a879")
+    )
+    factions.append(merchants)
+
+    var military = Faction.new()
+    military.initialize(
+        2,
+        "Militares",
+        "Buscan seguridad, disciplina y reconocimiento.",
+        Color("#668bc4")
+    )
+    factions.append(military)
+
+    var people = Faction.new()
+    people.initialize(
+        3,
+        "Pueblo",
+        "Busca bienestar y mejores condiciones de vida.",
+        Color("#b97878")
+    )
+    factions.append(people)
+
+    for person in citizens:
+        var faction_index = person.id % factions.size()
+        var faction: Faction = factions[faction_index]
+
+        person.faction_id = faction.id
+        faction.add_member(person.id)
+
+        if faction.leader_id == -1:
+            faction.set_leader(person.id)
