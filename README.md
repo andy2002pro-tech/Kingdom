@@ -39,6 +39,8 @@ El objetivo es crear una simulación donde las historias surjan de las decisione
 - **Diplomacia y guerra:** alianzas, tratados, comercio, espionaje, conflictos, ejércitos y asedios.
 - **Historia y legado:** acontecimientos persistentes, biografías, sucesiones, monumentos y crónicas de cada reino.
 
+La vision ampliada contempla habitaciones, pertenencias y propiedad privada o comunal; habilidades y profesiones; mercados y sistemas economicos; religiones, filosofias y organizaciones; artistas y patrimonio cultural; puertos, barcos y comercio maritimo. Tambien contempla acontecimientos historicos persistentes y herramientas de automatizacion y delegacion para evitar la microgestion obligatoria.
+
 La visión completa está descrita en `GAME_DESIGN.md`. Las etapas previstas están en `ROADMAP.md`. Las funciones anteriores son objetivos de diseño y no deben interpretarse como sistemas ya implementados.
 
 ## Próxima etapa: v0.5.0

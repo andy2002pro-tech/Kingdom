@@ -361,6 +361,93 @@ El sistema historico se construira de forma modular:
 
 La base de registro debe comenzar antes de la version dedicada a las cronicas completas.
 
+
+## Habitaciones, pertenencias y propiedad
+
+Los edificios podran contener habitaciones reconocidas por el juego mediante paredes, puertas y elementos constructivos. Podran asignarse a ciudadanos, familias u organizaciones.
+
+Se contemplan dormitorios privados, compartidos y familiares, cocinas, comedores, bibliotecas, talleres, almacenes, tabernas, templos y salas de reunion.
+
+La calidad dependera del tamano, mobiliario, limpieza, privacidad, iluminacion y estado. Estas condiciones influiran en comodidad, descanso, felicidad y prestigio.
+
+Cada ciudadano tendra un registro de pertenencias identificables: ropa, herramientas, libros, alimentos, monedas, muebles y objetos heredados. Cada objeto podra registrar propietario, ubicacion, estado y procedencia.
+
+Los objetos podran estar en posesion de un ciudadano, guardados en una habitacion o almacen, prestados, vendidos, heredados, perdidos o robados. Los robos podran provocar sospechas, denuncias, investigaciones, castigos, venganzas y rivalidades.
+
+La propiedad dependera de las leyes y del sistema economico. Se contemplan modelos privados, familiares y hereditarios, gremiales, estatales, comunales y religiosos, asi como combinaciones de varios modelos.
+
+Los almacenes comunales y estatales podran distribuir bienes segun reglas de necesidad, prioridad, trabajo, cargo o derechos reconocidos. La distribucion y sus desigualdades tendran consecuencias sociales y politicas.
+
+## Ciudadanos, habilidades y profesiones
+
+Las habilidades representaran capacidades aprendidas y desarrolladas mediante practica. Seran independientes de la personalidad: un ciudadano trabajador no sera automaticamente un buen herrero, y una persona ambiciosa no sera necesariamente competente.
+
+Las profesiones incluiran actividades productivas, comerciales, administrativas, artisticas, militares, religiosas y de servicios. Los ciudadanos buscaran empleo, aprenderan oficios y cambiaran de actividad segun sus capacidades, oportunidades, necesidades y circunstancias.
+
+La falta de herramientas, materias primas, suministros o demanda podra afectar el trabajo. Los ciudadanos podran buscar otro empleo, cambiar de profesion, emigrar, protestar o intentar producir y comerciar por otros medios.
+
+## Economia, mercados y distribucion
+
+La economia conectara produccion, consumo, almacenamiento, transporte, comercio y necesidades individuales y colectivas.
+
+Los mercados utilizaran oferta y demanda. Los precios y la disponibilidad dependeran de recursos, produccion, rutas, poblacion, conflictos y decisiones politicas.
+
+Se contemplan modelos de libre mercado, mercado regulado, economia estatal, gremial, comunal o planificada y modelos mixtos con sectores de propiedad diferente.
+
+Los impuestos podran aplicarse a tierras, propiedades, produccion, comercio, importaciones, productos concretos y territorios vasallos. Las tasas y exenciones podran generar ingresos, pero tambien evasiones, contrabando, escasez, descontento y conflictos.
+
+Los reinos tendran recursos y especializaciones distintas. Comerciantes y transportistas podran organizar intercambios, contratos y rutas entre asentamientos y reinos.
+
+La escasez tendra consecuencias concretas. La falta prolongada de trigo, por ejemplo, podra perjudicar a panaderos, taberneros, trabajadores y consumidores, y generar desempleo, protestas, migracion o presion politica.
+
+## Religion, filosofia y organizaciones
+
+Los ciudadanos podran mantener creencias religiosas, filosoficas y culturales. Estas influiran en sus valores, decisiones, relaciones, tolerancia, lealtades y posturas politicas, sin determinar completamente su personalidad.
+
+El mundo podra contener varias religiones, cultos regionales, tradiciones ancestrales, filosofias y movimientos de pensamiento. Sus definiciones seran ampliables y no dependeran exclusivamente de una lista cerrada de opciones.
+
+Las organizaciones religiosas y filosoficas podran tener miembros, seguidores, lideres, recursos, lugares de reunion, templos, escuelas e influencia social. Podran promover celebraciones, educacion, donaciones y obras, apoyar al gobierno o enfrentarse a sus decisiones.
+
+Una organizacion religiosa o filosofica podra convertirse en una fuerza politica. Sus lideres seran ciudadanos reales y podran llegar a ocupar cargos de gobierno cuando las circunstancias y las reglas politicas lo permitan.
+
+## Arte, artistas y patrimonio cultural
+
+Los artistas seran ciudadanos con habilidades y trayectorias propias. Podran crear pinturas, esculturas, retratos, obras religiosas y otras expresiones culturales.
+
+Las obras tendran autor, fecha, procedencia, propietario, ubicacion y valor. Podran ser encargadas, vendidas, heredadas, donadas, robadas, destruidas o conservadas por instituciones.
+
+La fama de un artista dependera de sus obras, encargos, prestigio y reconocimiento. Las creaciones podran representar acontecimientos y personajes reales, convertirse en simbolos de una faccion o formar parte del patrimonio historico de un reino.
+
+## Puertos y navegacion
+
+Los asentamientos costeros podran desarrollar puertos e instalaciones maritimas. Los barcos seran unidades fisicas y economicas con propietarios, tripulaciones, capacidad, estado, carga y funciones.
+
+Se contemplan barcos comerciales, transporte de pasajeros, colonos y tropas, barcos militares, proteccion de rutas, batallas navales, captura de embarcaciones, bloqueos de puertos, pirateria, saqueos, escoltas y desembarcos.
+
+La navegacion conectara regiones y reinos, y ampliara las posibilidades de comercio, diplomacia y guerra. Su desarrollo dependera de la geografia y de las capacidades de cada sociedad.
+
+## Acontecimientos, persistencia y memoria
+
+Los acontecimientos importantes deberan registrar no solo que ocurrio, sino tambien sus causas conocidas, participantes, consecuencias y fecha.
+
+Cuando sea posible, la simulacion conservara relaciones causales verificables. Por ejemplo, una protesta de panaderos podra vincularse con una escasez prolongada de trigo, la interrupcion de una ruta o una decision fiscal.
+
+Se distinguiran los hechos objetivos de lo que cada personaje conoce, cree o comunica. Los informes podran ser incompletos, estar desactualizados o ser manipulados por personajes deshonestos.
+
+El guardado debera conservar progresivamente la identidad y el estado de ciudadanos, familias, objetos, habitaciones, organizaciones, instituciones, asentamientos, reinos, rutas, barcos, conflictos y acontecimientos.
+
+La historia debera sobrevivir a la desaparicion de personajes, facciones y reinos. Los archivos historicos no dependeran de que sus protagonistas sigan vivos.
+
+## Delegacion, automatizacion y ritmo de simulacion
+
+La profundidad de la simulacion no debe obligar al jugador a administrar manualmente cada objeto, trabajador o suministro.
+
+Se podran establecer politicas generales y delegar tareas en administradores, gobernadores, responsables de almacenes, comerciantes y otras autoridades. La automatizacion respetara las leyes, el sistema economico y las instrucciones vigentes.
+
+El jugador podra configurar prioridades, limites y reglas de distribucion. Los responsables autonomos podran actuar dentro de sus atribuciones y generar consecuencias si sus intereses difieren de los del gobernante.
+
+La partida incluira pausa, distintas velocidades de simulacion y notificaciones configurables. Los acontecimientos importantes deberan poder consultarse sin interrumpir constantemente la experiencia.
+
 ## Principios de diseno
 - Los ciudadanos y las facciones deben tener autonomia.
 - Las decisiones deben tener consecuencias comprensibles.

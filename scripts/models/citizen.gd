@@ -37,6 +37,14 @@ var activity: String = "Paseando"
 # Faccion principal v0.4.0
 var faction_id: int = -1
 
+# Atributos politicos v0.5.0
+var loyalty: float = 50.0
+var ambition: float = 50.0
+var honesty: float = 50.0
+var competence: float = 50.0
+var influence: float = 0.0
+var greed: float = 50.0
+
 # Sistema social v0.3.0
 var relationships: Dictionary = {}
 var social_partner_id: int = -1
@@ -56,6 +64,14 @@ func initialize(citizen_id: int, rng: RandomNumberGenerator) -> void:
     hunger = rng.randf_range(65.0, 100.0)
     energy = rng.randf_range(65.0, 100.0)
     happiness = rng.randf_range(60.0, 95.0)
+
+    # Valores politicos individuales.
+    loyalty = rng.randf_range(25.0, 100.0)
+    ambition = rng.randf_range(0.0, 100.0)
+    honesty = rng.randf_range(20.0, 100.0)
+    competence = rng.randf_range(20.0, 100.0)
+    influence = rng.randf_range(0.0, 20.0)
+    greed = rng.randf_range(0.0, 100.0)
 
     speed = rng.randf_range(25.0, 48.0)
 
