@@ -1,5 +1,15 @@
 # Historial de cambios
 
+## Preparación posterior a v0.4.1 - Desarrollo en curso
+- Preparación de modelos iniciales para instituciones y cargos políticos.
+- `Institution` contempla miembros, cargos, autoridad, influencia, presupuesto y responsabilidades.
+- `PoliticalPosition` contempla titular, institución, autoridad, método de nombramiento y responsabilidades.
+- Estos modelos todavía no están integrados en la simulación principal.
+- Se aprueba la dirección visual 3D low-poly y la arquitectura de interacción híbrida.
+- Se inicia la planificación de un prototipo visual 3D independiente.
+- No se declara una nueva versión funcional en esta etapa.
+
+
 ## v0.2.0 - 2026-11-18
 - Integracion del modelo Citizen.
 - Personalidades y necesidades.

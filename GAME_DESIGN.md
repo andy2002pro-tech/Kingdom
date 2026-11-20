@@ -475,3 +475,23 @@ Los precios se revisaran cuando exista una demo y se conozcan el alcance, calida
 
 ## Nombre
 Crown & Consequence es el nombre comercial provisional. La disponibilidad legal, comercial y de marca debe comprobarse antes de anunciarlo oficialmente.
+
+
+## Dirección visual y técnica: SociedadViva 3D
+
+La dirección visual aprobada es 3D low-poly moderno: geometría limpia, personajes estilizados, colores claros y agradables y una estética coherente.
+
+El proyecto combinará dos formas principales de interacción:
+
+- **Tercera persona:** explorar el mundo, controlar al gobernante u otros personajes, visitar edificios y conversar con ciudadanos.
+- **Vista estratégica:** administrar asentamientos, construcciones, población, recursos y fuerzas militares desde una cámara elevada o isométrica.
+
+La cámara deberá permitir acercar, alejar, girar y seguir personajes o grupos.
+
+La simulación social seguirá siendo el núcleo del juego. El cambio a 3D no debe convertir a los ciudadanos en simples elementos decorativos: conservarán identidad, personalidad, necesidades, relaciones, historia y autonomía.
+
+Para mantener el rendimiento, la simulación podrá utilizar distintos niveles de detalle según la distancia y relevancia de los personajes, conservando su identidad e historial.
+
+El desarrollo inicial priorizará terreno, iluminación, cámara, vegetación, edificios y ciudadanos autónomos. El combate en tiempo real se desarrollará posteriormente y combinará control directo, órdenes tácticas y pausa opcional.
+
+La transición se realizará de forma gradual, conservando la versión 2D existente como referencia hasta que el prototipo 3D esté comprobado.

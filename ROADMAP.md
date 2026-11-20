@@ -196,3 +196,32 @@ El mundo tendra dos escalas visibles: mapa del asentamiento y mapa estrategico. 
 La construccion local permitira dibujar parcelas y zonas de trabajo; la explotacion regional utilizara recursos naturales e instalaciones. Ambos niveles estaran conectados por produccion, transporte y almacenamiento.
 
 La vision completa del juego esta documentada en GAME_DESIGN.md.
+
+
+## Nueva dirección técnica: SociedadViva 3D
+
+Esta dirección está aprobada como objetivo de desarrollo. No representa todavía una versión jugable ni sustituye las versiones completadas.
+
+### Etapa 0 - Prototipo visual 3D
+
+- [ ] Preparar una estructura de escenas y scripts 3D independiente y ordenada.
+- [ ] Conservar la versión 2D y su escena principal como referencia funcional.
+- [ ] Crear terreno low-poly con colores claros y agradables.
+- [ ] Configurar iluminación, ambiente y sombras.
+- [ ] Implementar cámara estratégica elevada con zoom y rotación.
+- [ ] Preparar la futura cámara de tercera persona.
+- [ ] Crear árboles, caminos y edificios de prueba.
+- [ ] Incorporar cinco ciudadanos autónomos de prueba.
+- [ ] Comprobar rendimiento en el dispositivo Android utilizado para desarrollar.
+
+### Etapas posteriores
+
+- [ ] Integrar exploración en tercera persona y administración estratégica.
+- [ ] Conectar los ciudadanos 3D con los modelos sociales persistentes.
+- [ ] Integrar gobierno, instituciones y cargos políticos.
+- [ ] Ampliar economía, construcción y asentamientos.
+- [ ] Desarrollar ejércitos y combate en tiempo real en una etapa posterior.
+
+La simulación militar no será el primer objetivo del prototipo. Se priorizarán el mundo, los ciudadanos y las cámaras.
+
+La transición 3D no cambia por sí sola el número de versión. La numeración se actualizará cuando exista una entrega funcional y comprobada.

@@ -43,26 +43,34 @@ La vision ampliada contempla habitaciones, pertenencias y propiedad privada o co
 
 La visión completa está descrita en `GAME_DESIGN.md`. Las etapas previstas están en `ROADMAP.md`. Las funciones anteriores son objetivos de diseño y no deben interpretarse como sistemas ya implementados.
 
-## Próxima etapa: v0.5.0
+## Estado actual y próxima etapa
 
-La siguiente versión está planificada alrededor del **gobierno, las instituciones y los cargos**. Entre sus objetivos se encuentran:
+**Última versión funcional confirmada: v0.4.1.**
 
-- Modelar distintos regímenes políticos.
-- Crear instituciones y cadenas de mando.
-- Definir cargos y personajes que puedan ocuparlos.
-- Incorporar ministros, representantes y propuestas.
-- Introducir legitimidad, autoridad y apoyo político.
-- Permitir decisiones negociadas o unilaterales, con consecuencias distintas según el régimen.
-- Preparar el registro persistente de acontecimientos políticos.
+La versión v0.5.0 está en preparación. Existen modelos iniciales para instituciones y cargos políticos (`institution.gd` y `political_position.gd`), pero todavía no están integrados en la simulación principal ni constituyen un sistema de gobierno funcional.
 
-Estos objetivos todavía están en planificación y desarrollo; no forman parte de la versión funcional v0.4.1.
+La dirección aprobada para el proyecto es **SociedadViva 3D**, con estética low-poly moderna y un enfoque híbrido que combine simulación social profunda, exploración en tercera persona y administración estratégica.
 
-## Tecnología
+La transición visual a 3D es una nueva etapa de desarrollo, no una versión funcional publicada. Se conservará el trabajo 2D anterior como referencia y parte del historial del proyecto.
+
+### Próximos objetivos
+
+- Preparar una estructura técnica 3D sin destruir la versión 2D.
+- Crear un escenario de terreno low-poly.
+- Configurar iluminación y cámara híbrida.
+- Incorporar árboles, caminos y edificios de prueba.
+- Crear cinco ciudadanos autónomos con una arquitectura preparada para crecer.
+- Retomar después la integración política, económica y social.
+
+El combate y los sistemas militares avanzados quedan para etapas posteriores.
+
+## Tecnología y entorno
 
 - Godot 4.7.
 - GDScript.
-- Simulación y representación 2D.
-- Desarrollo y mantenimiento del proyecto desde Android, usando Termux y Godot.
+- Implementación funcional actual: 2D.
+- Dirección visual futura: 3D low-poly.
+- Desarrollo y mantenimiento desde Android mediante Termux y Godot Android.
 
 ## Estructura del repositorio
 
