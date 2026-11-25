@@ -460,9 +460,12 @@ La partida incluira pausa, distintas velocidades de simulacion y notificaciones 
 - Evitar implementar todos los sistemas simultaneamente.
 
 ## Alcance y plataformas
-Objetivo inicial de diseno: PC, por la complejidad de las interfaces de gestion y politica. Evaluar una adaptacion a Android posteriormente.
 
-El desarrollo actual se realiza en Android como entorno de trabajo.
+La plataforma objetivo principal es **PC con Windows**, donde se ejecutará y desarrollará el juego con Godot 4.7.2.
+
+Android se utilizará como entorno alternativo para consultar, editar y programar el proyecto cuando no se tenga acceso a la PC. No es la plataforma prioritaria de ejecución ni condiciona el diseño principal de las interfaces.
+
+La arquitectura deberá separar simulación y representación para permitir optimizaciones y posibles adaptaciones futuras.
 
 ## Comercializacion provisional
 Modelo recomendado: demo gratuita, posible acceso anticipado y lanzamiento completo.
@@ -479,19 +482,35 @@ Crown & Consequence es el nombre comercial provisional. La disponibilidad legal,
 
 ## Dirección visual y técnica: SociedadViva 3D
 
-La dirección visual aprobada es 3D low-poly moderno: geometría limpia, personajes estilizados, colores claros y agradables y una estética coherente.
+La dirección visual aprobada es 3D low-poly moderno: geometría limpia, personajes estilizados, colores claros y una estética coherente.
 
-El proyecto combinará dos formas principales de interacción:
-
+El juego combinará dos formas principales de interacción:
 - **Tercera persona:** explorar el mundo, controlar al gobernante u otros personajes, visitar edificios y conversar con ciudadanos.
-- **Vista estratégica:** administrar asentamientos, construcciones, población, recursos y fuerzas militares desde una cámara elevada o isométrica.
+- **Vista estratégica:** administrar asentamientos, construcciones, población, recursos y fuerzas desde una cámara elevada.
 
-La cámara deberá permitir acercar, alejar, girar y seguir personajes o grupos.
+La cámara estratégica ya tiene un prototipo con movimiento, aceleración, giro y zoom. La exploración en tercera persona continúa siendo un objetivo de diseño, no una función implementada que deba darse por terminada.
 
-La simulación social seguirá siendo el núcleo del juego. El cambio a 3D no debe convertir a los ciudadanos en simples elementos decorativos: conservarán identidad, personalidad, necesidades, relaciones, historia y autonomía.
+### Estado del prototipo auditado
 
-Para mantener el rendimiento, la simulación podrá utilizar distintos niveles de detalle según la distancia y relevancia de los personajes, conservando su identidad e historial.
+La escena principal 3D está en `scenes/world_3d/world_3d.tscn` y utiliza `scripts/world_3d/world_controller.gd`. El prototipo contiene:
+- Terreno plano de prueba, caminos, árboles y tres casas.
+- Doce ciudadanos generados y movimiento básico.
+- Necesidades de hambre y energía, alimentación y descanso.
+- Cámara estratégica con controles de navegación.
+- Selección de ciudadanos, indicador visual, ficha individual y seguimiento de cámara.
+- Reloj y calendario en el controlador; sus controles deben seguir validándose en ejecución.
+- Desplazamiento del panel sin interferir con el zoom, comprobado en Godot.
 
-El desarrollo inicial priorizará terreno, iluminación, cámara, vegetación, edificios y ciudadanos autónomos. El combate en tiempo real se desarrollará posteriormente y combinará control directo, órdenes tácticas y pausa opcional.
+El código también contiene lógica social y familiar que requiere pruebas continuas. La presencia de código no equivale por sí sola a validar todos sus comportamientos.
 
-La transición se realizará de forma gradual, conservando la versión 2D existente como referencia hasta que el prototipo 3D esté comprobado.
+### Prioridad de desarrollo
+
+La prioridad inmediata es consolidar el mundo y la construcción: mejorar el terreno, organizar el asentamiento, implementar colocación de edificios y avanzar hacia viviendas y zonas de trabajo. Después se conectarán progresivamente autonomía ciudadana, economía e instituciones.
+
+La simulación social seguirá siendo el núcleo del juego. Los ciudadanos conservarán identidad, personalidad, necesidades, relaciones, historia y autonomía. La arquitectura separará los datos persistentes de las entidades y su representación 3D.
+
+### Entorno de desarrollo
+
+Windows con Godot 4.7.2 es el entorno principal y la plataforma objetivo. Android con Termux es un entorno auxiliar para editar y programar cuando no se disponga de la PC.
+
+El combate en tiempo real se desarrollará en una etapa posterior y podrá combinar control directo, órdenes tácticas y pausa opcional.

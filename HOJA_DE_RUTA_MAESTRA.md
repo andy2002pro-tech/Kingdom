@@ -589,14 +589,11 @@ seguridad, guerra y IA.
 
 ### 19.3 Tiempo
 
-Reloj interno independiente de FPS, pausa y velocidades sugeridas ×1,
-×2, ×5 y ×10. Calendario propio con días, meses, estaciones y años.
+El reloj interno debe ser independiente de los FPS y permitir pausa y varias velocidades. En el prototipo actual, el controlador está configurado para avanzar aproximadamente diez minutos del mundo por segundo real y utiliza un calendario de doce meses de treinta días.
 
-Frecuencias orientativas: - Continuo: movimiento y presentación
-visual. - Por hora: actividades y necesidades. - Diario: consumo,
-producción y trabajo. - Semanal: mercados, salarios y balances. -
-Mensual: impuestos, presupuestos y estadísticas. - Anual: envejecimiento
-y balances demográficos.
+Las velocidades presentes en el código son 1x, 2x y 4x, además de pausa. El controlador asigna las teclas 1, 2 y 3 a esas velocidades y Espacio a pausa/reanudación. Los botones de la interfaz también contemplan pausa y velocidades. La respuesta de todos los controles debe validarse en ejecución antes de considerarlos cerrados.
+
+Las frecuencias de actualización de necesidades, producción, mercados, balances y envejecimiento se definirán según cada sistema, evitando depender de los FPS.
 
 ### 19.4 Simulación por niveles
 
@@ -607,12 +604,11 @@ y balances demográficos.
 Al volver a una zona, sus habitantes y entidades conservan continuidad e
 historial.
 
-### 19.5 Android
+### 19.5 Plataformas y rendimiento
 
-Presupuestos de CPU y memoria; LOD; materiales compartidos; polígonos
-moderados; carga y descarga por distancia; limitar actualizaciones
-visuales; separar frecuencia de simulación y FPS. Priorizar estabilidad
-y escalabilidad.
+Windows con Godot 4.7.2 es la plataforma objetivo y el entorno principal de desarrollo. Android con Termux es un entorno alternativo para editar y programar cuando no se tenga acceso a la PC; no es la plataforma principal de ejecución.
+
+La arquitectura deberá considerar presupuestos de CPU y memoria, LOD, materiales compartidos, geometría moderada, carga y descarga por distancia y separación entre frecuencia de simulación y FPS.
 
 ### 19.6 Guardado y carga
 
@@ -675,48 +671,52 @@ necesidades reales. No crear todos los archivos de golpe.
 
 ## 21. Orden recomendado de implementación
 
-1.  **Fundamentos técnicos:** administrador del juego, mundo, reloj,
-    datos, IDs y guardado.
-2.  **Primer ciudadano funcional:** creación, identidad, datos
-    persistentes y representación 3D.
-3.  **Necesidades e IA:** hambre, descanso, trabajo, decisiones y
-    movimiento.
-4.  **Familias y viviendas:** relaciones, habitaciones, pertenencias y
-    convivencia.
-5.  **Economía inicial:** inventarios, recursos, producción, intercambio
-    y dinero.
-6.  **Asentamiento autónomo:** construcción, comercios, agricultura y
-    transporte.
-7.  **Instituciones:** gobierno, leyes, justicia, cultura, diplomacia y
-    ejército.
-8.  **Sistemas avanzados:** comercio internacional, banca,
-    investigación, seguridad, emergencias y guerras.
-9.  **Mundo e historia:** generación procedural, exploración, eras y
-    evolución de civilizaciones.
-10. **Optimización y contenido:** rendimiento Android, interfaz,
-    herramientas, escenarios y expansión.
+El orden inmediato se ajusta al estado real del prototipo. La prioridad es consolidar el mundo 3D y la construcción antes de ampliar sistemas de gran alcance.
 
-Implementar y probar cada fase antes de ampliar la siguiente. No
-confundir sistemas diseñados con sistemas ya implementados.
+1. **Consolidar el mundo:** revisar terreno, escala, iluminación, caminos, vegetación y distribución.
+2. **Construcción local:** crear modo de construcción, selección de edificios, colocación, rotación, validación de espacios y cancelación o retirada.
+3. **Viviendas y asentamiento:** conectar edificios, hogares y ciudadanos.
+4. **Zonas productivas:** preparar parcelas, lugares de trabajo, recursos y almacenamiento.
+5. **Autonomía ciudadana:** consolidar necesidades, actividades, relaciones, familias y tareas.
+6. **Economía inicial:** inventarios, recursos, producción, intercambio y dinero.
+7. **Instituciones y gobierno:** integrar cargos, autoridades, leyes y administración.
+8. **Mundo estratégico:** regiones, asentamientos autónomos, diplomacia y comercio.
+9. **Sistemas avanzados:** seguridad, conflictos, ejércitos, combate, historia y optimización.
 
-------------------------------------------------------------------------
+Cada fase debe probarse antes de ampliarse. No confundir sistemas diseñados, código presente y funciones comprobadas en ejecución.
 
 ## 22. Estado conocido del prototipo
 
-Entorno conocido: Godot 4.7.2 en Android. El usuario decidió abrir y
-trabajar con el editor Godot y dejar de usar Termux:X11.
+**Entorno principal:** Windows con Godot 4.7.2. Android/Termux queda como entorno auxiliar de edición y programación.
 
-Proyecto conocido en `SociedadViva/`. El prototipo visual previo
-mostraba terreno, caminos, árboles y tres casas. La escena principal
-conocida era `scenes/world_3d/world_3d.tscn`, con un controlador en
-`scripts/world_3d/world_controller.gd` y una escena de casa en
-`scenes/buildings/house.tscn`.
+**Estado de versión:** v0.4.1 continúa siendo la última versión numerada funcional. El trabajo 3D es una etapa en curso, no una nueva versión publicada.
 
-Este estado es una referencia histórica de la conversación, no una
-verificación del contenido actual de los archivos. Antes de modificar
-código, inspeccionar el proyecto real y hacer copias de seguridad.
+### Elementos presentes en el proyecto
 
-------------------------------------------------------------------------
+- `project.godot` inicia `scenes/world_3d/world_3d.tscn`.
+- Escena 3D con terreno de prueba, caminos, árboles y tres casas.
+- El controlador genera doce ciudadanos con movimiento básico.
+- Necesidades básicas de hambre y energía, alimentación y descanso.
+- Cámara estratégica con movimiento WASD, aceleración con Shift, giro con Q/E y zoom con rueda.
+- Selección mediante clic, indicador visual y ficha individual.
+- La ficha muestra necesidades, actividad, ánimo y datos personales y sociales.
+- La cámara puede seguir al ciudadano seleccionado.
+- El desplazamiento del panel no modifica el zoom; comprobado en Godot.
+- El controlador contiene reloj, calendario y controles de velocidad. Las teclas 1, 2, 3 y Espacio están asignadas en el código; validar en ejecución.
+
+El controlador también contiene lógica para interacciones sociales y formación de familias. Su funcionamiento completo debe probarse y no debe describirse como validado solo por existir en el código.
+
+### Prioridad inmediata
+
+Consolidar el mundo y comenzar el sistema de construcción: modo de construcción, colocación y orientación de edificios, validación de espacios, viviendas y zonas productivas.
+
+### Límites y cautelas
+
+- `institution.gd` y `political_position.gd` no constituyen todavía un sistema de gobierno integrado.
+- No presentar economía completa, construcción funcional, diplomacia ni simulación de reinos como sistemas terminados.
+- La estructura de carpetas propuesta es orientativa; la estructura real tiene prioridad.
+- Antes de cambiar código, inspeccionar archivos y crear respaldos.
+- Conservar archivos de conflicto de Syncthing y respaldos hasta resolverlos explícitamente.
 
 ## 23. Regla de continuidad del proyecto
 

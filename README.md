@@ -1,97 +1,87 @@
 # SociedadViva
 
-**Simulador medieval de sociedad, política y estrategia desarrollado con Godot 4.7.**
+**Simulador medieval de sociedad, construcción, política y estrategia desarrollado con Godot 4.7.2.**
 
-SociedadViva es un sandbox de reinos vivos. El jugador comienza con una pequeña comunidad y participa en la transformación de una sociedad cuyos ciudadanos, familias, facciones, instituciones y reinos deben actuar con objetivos e intereses propios.
+SociedadViva es un sandbox de reinos vivos. El jugador participa en la transformación de una sociedad cuyos ciudadanos, familias, facciones, instituciones y reinos desarrollan objetivos e intereses propios.
 
 > No construiremos un mundo donde todo dependa del jugador. Construiremos un mundo donde el jugador sea una de las fuerzas que lo transforman.
 
 ## Estado del desarrollo
 
-**Última versión funcional implementada: v0.4.1 — Interfaz visual de facciones.**
+**Última versión numerada funcional: v0.4.1.**
+**Etapa actual: prototipo 3D en desarrollo.**
 
-La versión v0.4.1 se centra en los ciudadanos, sus necesidades y relaciones sociales, y la primera representación de las facciones internas del asentamiento.
+La transición a 3D ya cuenta con una escena principal propia y un prototipo en desarrollo. Esto no constituye todavía una nueva versión numerada ni una entrega completa.
 
-### Sistemas implementados
+### Elementos presentes en el prototipo 3D
 
-- Mundo y asentamiento representados en 2D.
-- Ciudadanos autónomos con movimiento y actividades.
-- Necesidades de hambre y energía, descanso y alimentación.
-- Personalidades, estados de ánimo y atributos individuales.
-- Relaciones sociales entre ciudadanos.
-- Encuentros y conversaciones autónomas.
-- Cuatro facciones iniciales: familias nobles, comerciantes, militares y pueblo.
-- Pertenencia de ciudadanos a facciones.
-- Datos básicos de influencia, riqueza, lealtad y descontento de las facciones.
-- Identificación visual de la facción de cada ciudadano y panel informativo de facciones.
+- Escena principal 3D: `scenes/world_3d/world_3d.tscn`.
+- Terreno, caminos, árboles y tres casas de prueba.
+- Doce ciudadanos generados con movimiento básico.
+- Necesidades de hambre y energía, alimentación y descanso.
+- Cámara estratégica con movimiento, aceleración, giro y zoom.
+- Selección de ciudadanos mediante clic.
+- Ficha individual con necesidades, actividad, ánimo y datos personales y sociales.
+- Indicador visual del ciudadano seleccionado y seguimiento con la cámara.
+- El panel permite desplazarse sin que la rueda del ratón cambie el zoom; comprobado en Godot.
 
-Estos sistemas constituyen la base de desarrollo; no representan todavía la simulación completa de un reino.
+El controlador contiene también lógica para reloj, calendario, actividades sociales y formación de familias. Su funcionamiento completo debe seguir validándose en ejecución.
+
+### Sistemas anteriores
+
+La v0.4.1 incorporó la base social 2D: ciudadanos, necesidades, personalidades, relaciones y facciones. Ese trabajo se conserva como parte del historial.
 
 ## Visión del juego
 
-El objetivo es crear una simulación donde las historias surjan de las decisiones y relaciones entre personajes y grupos:
-
-- **Gobierno y política:** monarquía, república, oligarquía y dictadura, con instituciones, cargos, legitimidad y autoridad.
-- **Sociedad autónoma:** ciudadanos, familias y facciones con necesidades, ambiciones, lealtades y conflictos.
-- **Ascenso social:** cualquier ciudadano podría llegar a ocupar posiciones de poder según sus capacidades, relaciones y circunstancias.
-- **Economía y construcción:** asentamientos, producción, recursos, zonas de trabajo, almacenamiento y transporte.
+- **Sociedad autónoma:** ciudadanos y familias con necesidades, ambiciones, lealtades y conflictos.
+- **Construcción y economía:** viviendas, edificios, producción, recursos, zonas de trabajo, almacenamiento y transporte.
+- **Gobierno y política:** instituciones, cargos, leyes, legitimidad y autoridad.
 - **Mundo estratégico:** territorios, asentamientos, fronteras, reinos vecinos y grupos independientes.
-- **Diplomacia y guerra:** alianzas, tratados, comercio, espionaje, conflictos, ejércitos y asedios.
-- **Historia y legado:** acontecimientos persistentes, biografías, sucesiones, monumentos y crónicas de cada reino.
+- **Diplomacia y guerra:** alianzas, tratados, comercio, espionaje, conflictos y ejércitos.
+- **Historia y legado:** acontecimientos persistentes, biografías, sucesiones, monumentos y crónicas.
 
-La vision ampliada contempla habitaciones, pertenencias y propiedad privada o comunal; habilidades y profesiones; mercados y sistemas economicos; religiones, filosofias y organizaciones; artistas y patrimonio cultural; puertos, barcos y comercio maritimo. Tambien contempla acontecimientos historicos persistentes y herramientas de automatizacion y delegacion para evitar la microgestion obligatoria.
-
-La visión completa está descrita en `GAME_DESIGN.md`. Las etapas previstas están en `ROADMAP.md`. Las funciones anteriores son objetivos de diseño y no deben interpretarse como sistemas ya implementados.
+La visión completa está en `GAME_DESIGN.md`; las etapas están en `ROADMAP.md` y `HOJA_DE_RUTA_MAESTRA.md`. Los objetivos de diseño no deben interpretarse como sistemas implementados.
 
 ## Estado actual y próxima etapa
 
-**Última versión funcional confirmada: v0.4.1.**
+La prioridad inmediata es **consolidar el mundo 3D y desarrollar la construcción**: herramientas para colocar edificios, organizar viviendas y crear espacios productivos.
 
-La versión v0.5.0 está en preparación. Existen modelos iniciales para instituciones y cargos políticos (`institution.gd` y `political_position.gd`), pero todavía no están integrados en la simulación principal ni constituyen un sistema de gobierno funcional.
+Después se ampliarán la autonomía ciudadana, la economía, las instituciones y los sistemas políticos. El combate avanzado queda para etapas posteriores.
 
-La dirección aprobada para el proyecto es **SociedadViva 3D**, con estética low-poly moderna y un enfoque híbrido que combine simulación social profunda, exploración en tercera persona y administración estratégica.
-
-La transición visual a 3D es una nueva etapa de desarrollo, no una versión funcional publicada. Se conservará el trabajo 2D anterior como referencia y parte del historial del proyecto.
-
-### Próximos objetivos
-
-- Preparar una estructura técnica 3D sin destruir la versión 2D.
-- Crear un escenario de terreno low-poly.
-- Configurar iluminación y cámara híbrida.
-- Incorporar árboles, caminos y edificios de prueba.
-- Crear cinco ciudadanos autónomos con una arquitectura preparada para crecer.
-- Retomar después la integración política, económica y social.
-
-El combate y los sistemas militares avanzados quedan para etapas posteriores.
+Los modelos `institution.gd` y `political_position.gd` existen, pero no están integrados en la simulación principal ni constituyen un sistema de gobierno funcional.
 
 ## Tecnología y entorno
 
-- Godot 4.7.
-- GDScript.
-- Implementación funcional actual: 2D.
-- Dirección visual futura: 3D low-poly.
-- Desarrollo y mantenimiento desde Android mediante Termux y Godot Android.
+- Motor: Godot 4.7.2.
+- Lenguaje: GDScript.
+- Plataforma objetivo y entorno principal: PC con Windows.
+- Entorno alternativo: Android con Termux para editar y programar cuando no se disponga de la PC.
+- Dirección visual: 3D low-poly moderno.
+- Interacción prevista: simulación autónoma con intervención y gestión del jugador.
 
 ## Estructura del repositorio
 
-- `project.godot`: configuración del proyecto.
-- `scenes/`: escenas del juego.
-- `scripts/main.gd`: lógica principal y simulación.
-- `scripts/models/citizen.gd`: modelo de ciudadano.
-- `scripts/models/faction.gd`: modelo de facción.
-- `GAME_DESIGN.md`: visión, sistemas y principios de diseño.
-- `ROADMAP.md`: versiones y objetivos de desarrollo.
-- `CHANGELOG.md`: historial de cambios, cuando corresponda.
-- `backups/`: copias de seguridad locales; su contenido puede variar y no todas las copias tienen por qué estar publicadas.
+- `project.godot`: configuración.
+- `scenes/world_3d/`: escena y mundo 3D.
+- `scenes/buildings/`: escenas de edificios.
+- `scripts/world_3d/`: lógica del mundo 3D.
+- `scripts/buildings/`: lógica de construcción y edificios.
+- `scripts/models/`: modelos de ciudadanos y otros sistemas.
+- `scripts/visuals/`: representación visual.
+- `GAME_DESIGN.md`: visión y diseño.
+- `ROADMAP.md`: versiones y objetivos.
+- `HOJA_DE_RUTA_MAESTRA.md`: referencia de continuidad.
+- `SESSION_STATE.md`: estado de trabajo.
+- `CHANGELOG.md`: historial.
+
+Las carpetas de respaldos y los archivos de conflicto de sincronización son elementos de mantenimiento; no forman parte de la funcionalidad del juego.
 
 ## Desarrollo
 
-El proyecto se mantiene en el repositorio:
+Repositorio: [andy2002pro-tech/Kingdom](https://github.com/andy2002pro-tech/Kingdom)
 
-[andy2002pro-tech/Kingdom](https://github.com/andy2002pro-tech/Kingdom)
-
-La rama principal de desarrollo es `main`. Los cambios se revisan y guardan mediante Git antes de publicarse.
+La rama principal es `main`. Windows es la fuente principal de desarrollo. Android/Termux es un entorno auxiliar, no la plataforma principal de ejecución.
 
 ## Estado del proyecto
 
-SociedadViva está en una etapa temprana de desarrollo. La visión incluye sistemas de gran alcance, pero se construirán por etapas, procurando mantener una base técnica funcional y coherente.
+SociedadViva se desarrolla gradualmente. La prioridad es mantener una base jugable, probar cada etapa y ampliar la simulación sin confundir objetivos futuros con funciones terminadas.

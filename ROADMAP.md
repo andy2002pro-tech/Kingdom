@@ -198,30 +198,45 @@ La construccion local permitira dibujar parcelas y zonas de trabajo; la explotac
 La vision completa del juego esta documentada en GAME_DESIGN.md.
 
 
-## Nueva dirección técnica: SociedadViva 3D
+## Desarrollo actual: SociedadViva 3D
 
-Esta dirección está aprobada como objetivo de desarrollo. No representa todavía una versión jugable ni sustituye las versiones completadas.
+La transición 3D está en desarrollo. La v0.4.1 sigue siendo la última versión numerada funcional; el prototipo 3D no se declara como una nueva versión publicada.
 
-### Etapa 0 - Prototipo visual 3D
+### Etapa 0 - Mundo 3D y construcción
 
-- [ ] Preparar una estructura de escenas y scripts 3D independiente y ordenada.
-- [ ] Conservar la versión 2D y su escena principal como referencia funcional.
-- [ ] Crear terreno low-poly con colores claros y agradables.
-- [ ] Configurar iluminación, ambiente y sombras.
-- [ ] Implementar cámara estratégica elevada con zoom y rotación.
-- [ ] Preparar la futura cámara de tercera persona.
-- [ ] Crear árboles, caminos y edificios de prueba.
-- [ ] Incorporar cinco ciudadanos autónomos de prueba.
-- [ ] Comprobar rendimiento en el dispositivo Android utilizado para desarrollar.
+**Presente en el prototipo**
+- [x] Escena principal 3D configurada.
+- [x] Terreno de prueba y caminos.
+- [x] Árboles y tres casas generadas.
+- [x] Doce ciudadanos con movimiento básico.
+- [x] Necesidades básicas de hambre y energía, alimentación y descanso.
+- [x] Cámara estratégica con movimiento, aceleración, giro y zoom.
+- [x] Selección mediante clic, ficha individual e indicador visual.
+- [x] Seguimiento del ciudadano seleccionado.
+- [x] Desplazamiento del panel sin interferir con el zoom; comprobado en Godot.
+
+**Siguiente trabajo**
+- [ ] Consolidar escala, distribución y aspecto del terreno.
+- [ ] Implementar modo de construcción.
+- [ ] Permitir seleccionar, colocar y orientar edificios.
+- [ ] Validar espacios y evitar colocaciones inválidas.
+- [ ] Añadir retirada o cancelación de construcciones.
+- [ ] Desarrollar viviendas y asignación de hogares.
+- [ ] Preparar parcelas y zonas de trabajo.
+- [ ] Incorporar recursos, almacenamiento y producción inicial.
+- [ ] Probar reloj, calendario y controles de velocidad.
+- [ ] Preparar guardado y carga del mundo.
 
 ### Etapas posteriores
 
-- [ ] Integrar exploración en tercera persona y administración estratégica.
-- [ ] Conectar los ciudadanos 3D con los modelos sociales persistentes.
+- [ ] Consolidar autonomía, relaciones y ciclo de vida de los ciudadanos.
+- [ ] Conectar construcción, viviendas, trabajos y economía.
 - [ ] Integrar gobierno, instituciones y cargos políticos.
-- [ ] Ampliar economía, construcción y asentamientos.
-- [ ] Desarrollar ejércitos y combate en tiempo real en una etapa posterior.
+- [ ] Desarrollar asentamientos y reinos autónomos.
+- [ ] Integrar exploración en tercera persona.
+- [ ] Ampliar diplomacia, conflictos y ejércitos.
+- [ ] Desarrollar combate en una etapa posterior.
 
-La simulación militar no será el primer objetivo del prototipo. Se priorizarán el mundo, los ciudadanos y las cámaras.
+Windows con Godot 4.7.2 es el entorno principal y la plataforma objetivo. Android/Termux se utiliza como entorno auxiliar de edición y programación.
 
-La transición 3D no cambia por sí sola el número de versión. La numeración se actualizará cuando exista una entrega funcional y comprobada.
+La numeración de versiones solo cambiará cuando exista una entrega funcional y comprobada. Las casillas describen el estado del prototipo, no una versión publicada.

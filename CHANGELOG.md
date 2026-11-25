@@ -1,5 +1,17 @@
 # Historial de cambios
 
+## 2026-11-24 - Actualización de documentación y estado 3D
+
+- Windows con Godot 4.7.2 queda como plataforma objetivo y entorno principal.
+- Android/Termux queda como entorno alternativo para editar y programar.
+- Se documenta el prototipo 3D existente: terreno, caminos, árboles, casas, ciudadanos, necesidades, cámara estratégica y selección.
+- Se registra como comprobada la corrección del desplazamiento del panel sin alterar el zoom.
+- Mundo y construcción quedan como prioridad inmediata.
+- Se diferencia entre código presente, comportamientos comprobados y objetivos futuros.
+- La v0.4.1 continúa siendo la última versión numerada funcional.
+- Esta actualización afecta solo a la documentación; no modifica código ni elimina respaldos o archivos de Syncthing.
+
+
 ## Preparación posterior a v0.4.1 - Desarrollo en curso
 - Preparación de modelos iniciales para instituciones y cargos políticos.
 - `Institution` contempla miembros, cargos, autoridad, influencia, presupuesto y responsabilidades.

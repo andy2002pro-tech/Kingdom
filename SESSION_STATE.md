@@ -1,59 +1,70 @@
 # Estado de sesión - SociedadViva
 
 ## Estado del proyecto
-- Última versión funcional confirmada: v0.4.1.
-- Versión en preparación: v0.5.0, sin completar.
-- Motor: Godot 4.7.
-- Rama Git: main.
-- Repositorio remoto: andy2002pro-tech/Kingdom.
-- Dirección aprobada: SociedadViva 3D.
-- Estilo visual: low-poly moderno.
-- Enfoque: híbrido, simulación social profunda y representación 3D.
 
-## Trabajo realizado y confirmado
-- Existen modelos iniciales `scripts/models/institution.gd` y `scripts/models/political_position.gd`.
-- Ambos están versionados en Git.
-- Los modelos fueron inspeccionados; todavía no están integrados en la simulación principal.
-- Se prepararon `estado.sh`, `probar.sh` y `guardar.sh` en `~/bin`.
-- Los tres comandos están disponibles directamente en Termux.
-- `estado.sh` y `probar.sh` fueron probados.
-- `guardar.sh` superó una prueba básica: creó un respaldo TAR.GZ legible y terminó sin crear commit ni subir cambios.
-- `guardar.sh` protege los cambios que ya estaban preparados y ya no contiene instrucciones `git reset`.
-- La prueba real de commit y push todavía está pendiente.
-- Se confirmó que los respaldos y archivos `.uid` no se agregan mediante la selección de archivos nuevos.
+- Última versión numerada funcional: v0.4.1.
+- Etapa actual: prototipo 3D en desarrollo.
+- Motor: Godot 4.7.2.
+- Plataforma objetivo y entorno principal: PC con Windows.
+- Entorno alternativo: Android/Termux para edición y programación.
+- Rama Git: `main`.
+- Repositorio remoto: `andy2002pro-tech/Kingdom`.
+- Dirección visual: 3D low-poly moderno.
+- Prioridad inmediata: consolidar el mundo y desarrollar la construcción.
+- Enfoque: ciudadanos autónomos con posibilidad de intervención y gestión del jugador.
+
+## Trabajo presente en el prototipo
+
+- La escena principal apunta a `scenes/world_3d/world_3d.tscn`.
+- Terreno de prueba, caminos, árboles y tres casas.
+- Doce ciudadanos con movimiento básico.
+- Necesidades de hambre y energía, alimentación y descanso.
+- Cámara estratégica con WASD, Shift, Q/E y rueda del ratón.
+- Selección mediante clic.
+- Ficha individual con necesidades, actividad, ánimo y datos personales y sociales.
+- Indicador visual y seguimiento del ciudadano seleccionado.
+- El panel permite desplazarse sin alterar el zoom; comprobado en Godot.
+- El controlador contiene reloj, calendario y velocidades 1x, 2x y 4x. Las teclas 1, 2, 3 y Espacio están asignadas en el código; deben validarse en ejecución.
+
+El controlador contiene lógica social y familiar. No se debe asumir que todos esos comportamientos están completamente validados.
 
 ## Decisiones de diseño confirmadas
+
+- Windows es la plataforma principal; Android es un entorno auxiliar.
 - Mundo 3D low-poly moderno.
-- Cámara híbrida: tercera persona y vista estratégica elevada.
-- Cámara libre con zoom, giro y seguimiento.
+- Cámara estratégica en el prototipo; tercera persona como objetivo futuro.
+- Simulación híbrida: ciudadanos autónomos y jugador con capacidad de intervenir.
 - Ciudadanos con identidad, personalidad, relaciones, necesidades e historia.
-- Simulación por niveles de detalle para rendimiento.
-- Combate en tiempo real en una etapa posterior, con control directo, órdenes tácticas y pausa opcional.
-- La muerte del gobernante no debe terminar necesariamente la partida; la continuidad puede pasar a un sucesor u otro personaje.
+- Construcción y mundo como prioridad inmediata.
+- Sistemas económicos, políticos, diplomáticos y militares se incorporarán gradualmente.
+- No declarar versiones funcionales sin pruebas.
 
 ## Próximo objetivo
-Construir el primer prototipo visual 3D sin destruir ni reemplazar el proyecto 2D existente.
 
-Orden previsto:
-1. Revisar la configuración actual de Godot y preparar una estructura 3D separada.
-2. Crear una escena de terreno low-poly.
-3. Añadir iluminación y ambiente.
-4. Preparar cámara estratégica con zoom y rotación.
-5. Añadir árboles, caminos y edificios de prueba.
-6. Incorporar cinco ciudadanos autónomos.
-7. Probar importación y ejecución en Godot Android.
+Desarrollar el sistema de construcción sobre el mundo 3D existente.
 
-## Pendiente inmediato
-- Revisar el diff de los documentos actualizados.
-- Ejecutar `probar.sh`.
-- Revisar los cambios en Godot cuando corresponda.
-- Crear respaldo con `guardar.sh`.
-- Guardar y publicar los documentos mediante Git, únicamente después de revisar y confirmar.
+1. Revisar y consolidar terreno y distribución del asentamiento.
+2. Implementar el modo de construcción.
+3. Permitir seleccionar, colocar y orientar edificios.
+4. Validar espacios y gestionar cancelación o retirada.
+5. Avanzar hacia viviendas, hogares y zonas productivas.
+6. Conectar progresivamente ciudadanos, recursos y producción.
+
+## Pendiente de validación
+
+- Probar en Godot controles de velocidad y pausa.
+- Continuar comprobando actividades autónomas y sociales.
+- Revisar el sistema de construcción cuando se implemente.
+- Revisar el estado real del proyecto antes de cada parche.
+- Mantener respaldos y resolver conflictos de Syncthing sin borrar archivos automáticamente.
 
 ## Reglas de trabajo
-- Guiar al usuario en español, paso a paso y con un comando por vez.
-- Esperar la salida antes de avanzar.
-- No asumir que un comando se ejecutó si no hay resultado.
-- No borrar archivos `.uid` ni respaldos sin una razón explícita.
-- No declarar versiones funcionales sin pruebas.
-- No reemplazar la escena 2D hasta que la transición esté comprobada.
+
+- Guiar en español, paso a paso y con un comando por vez.
+- Esperar el resultado antes de avanzar.
+- No asumir que un comando se ejecutó sin ver su salida.
+- No modificar código del juego sin autorización.
+- No subir cambios a GitHub sin autorización explícita.
+- No usar `git add .` para publicar documentación.
+- No borrar archivos `.uid`, respaldos ni conflictos de Syncthing sin autorización.
+- Separar diseño, código presente y funcionamiento comprobado.
